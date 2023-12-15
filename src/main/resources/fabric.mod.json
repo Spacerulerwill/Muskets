@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "muskets",
+	"version": "${version}",
+	"name": "Muskets",
+	"description": "Add muskets to minecraft!",
+	"authors": [
+		"Spacerulerwill"
+	],
+	"contact": {
+		"homepage": "https://github.com/Spacerulerwill/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/muskets/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.spacerulerwill.muskets.Muskets"
+		],
+		"client": [
+			"net.spacerulerwill.muskets.MusketsClient"
+		],
+		"fabric-datagen": [
+			"net.spacerulerwill.muskets.MusketsDataGenerator"
+		]
+	},
+	"mixins": [
+		"muskets.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.2",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
