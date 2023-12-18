@@ -14,10 +14,12 @@ public class ModItems {
 
     public static final Item MUSKET = registerItem("musket", new Item(new FabricItemSettings().maxCount(1)));
     public static final Item FLINTLOCK = registerItem("flintlock", new Item(new FabricItemSettings().maxCount(1)));
+    private static final Item MUSKET_BALL = registerItem("musket_ball", new Item(new FabricItemSettings()));
 
     private static void addItemToWeaponsCombatGroup(FabricItemGroupEntries entries) {
         entries.add(MUSKET);
         entries.add(FLINTLOCK);
+        entries.add(MUSKET_BALL);
     }
 
     private static Item registerItem(String name, Item item) {
