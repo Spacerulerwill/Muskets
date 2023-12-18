@@ -13,7 +13,7 @@ import net.spacerulerwill.muskets.Muskets;
 
 public class ModItems {
 
-    public static final Item MUSKET = registerItem("musket", new Item(new FabricItemSettings()));
+    public static final Item MUSKET = registerItem("musket", new Item(new FabricItemSettings().maxCount(1)));
 
     private static void addItemToWeaponsCombatGroup(FabricItemGroupEntries entries) {
         entries.add(MUSKET);
