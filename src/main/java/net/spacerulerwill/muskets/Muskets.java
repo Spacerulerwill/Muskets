@@ -3,6 +3,7 @@ package net.spacerulerwill.muskets;
 import net.fabricmc.api.ModInitializer;
 
 import net.spacerulerwill.muskets.item.ModItems;
+import net.spacerulerwill.muskets.util.ModLootTableModifiers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,5 +14,6 @@ public class Muskets implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+		ModLootTableModifiers.modifyLootTables();
 	}
 }

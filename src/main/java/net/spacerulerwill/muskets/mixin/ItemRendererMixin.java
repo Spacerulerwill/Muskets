@@ -20,6 +20,9 @@ public abstract class ItemRendererMixin {
         if (stack.isOf(ModItems.MUSKET) && renderMode != ModelTransformationMode.GUI) {
             return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(Muskets.MOD_ID, "musket_3d", "inventory"));
         }
+        else if (stack.isOf(ModItems.FLINTLOCK) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(Muskets.MOD_ID, "flintlock_3d", "inventory"));
+        }
         return value;
     }
 }
