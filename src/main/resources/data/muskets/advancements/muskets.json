@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "muskets:musket"
+    },
+    "title": "Yarrrr!",
+    "description": "Obtain a flintlock weapon",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/water_still.png"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "muskets:musket",
+              "muskets:flintlock"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
