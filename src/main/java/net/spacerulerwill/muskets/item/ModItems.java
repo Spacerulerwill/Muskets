@@ -3,6 +3,7 @@ package net.spacerulerwill.muskets.item;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.item.BowItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
@@ -12,14 +13,14 @@ import net.spacerulerwill.muskets.Muskets;
 
 public class ModItems {
 
-    public static final Item MUSKET = registerItem("musket", new Item(new FabricItemSettings().maxCount(1)));
-    public static final Item FLINTLOCK = registerItem("flintlock", new Item(new FabricItemSettings().maxCount(1)));
-    private static final Item MUSKET_BALL = registerItem("musket_ball", new Item(new FabricItemSettings()));
+    public static final Item MUSKET = registerItem("musket", new BowItem(new FabricItemSettings().maxCount(1)));
+    public static final Item FLINTLOCK = registerItem("flintlock", new BowItem(new FabricItemSettings().maxCount(1)));
+    public static final Item IRON_BALL = registerItem("iron_ball", new Item(new FabricItemSettings()));
 
     private static void addItemToWeaponsCombatGroup(FabricItemGroupEntries entries) {
         entries.add(MUSKET);
         entries.add(FLINTLOCK);
-        entries.add(MUSKET_BALL);
+        entries.add(IRON_BALL);
     }
 
     private static Item registerItem(String name, Item item) {
